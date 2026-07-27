@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500&family=Inter:wght@300;400&display=swap');
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#000;color:#fff;font-family:Inter,sans-serif;overflow:hidden}
+.slideshow,.slide,.overlay{position:fixed;inset:0}
+.slide{
+background-size:cover;
+background-position:center;
+opacity:0;
+transition:opacity 2s;
+}
+.slide.active{opacity:1}
+.slide:nth-child(1){background-image:url('img/hero/hero1.jpg')}
+.slide:nth-child(2){background-image:url('img/hero/hero2.jpg')}
+.slide:nth-child(3){background-image:url('img/hero/hero3.jpg')}
+.overlay{background:rgba(0,0,0,.45)}
+.hero{
+position:relative;
+z-index:2;
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center}
+h1{font-family:'Cormorant Garamond',serif;font-size:4rem;letter-spacing:.25rem}
+.hero p{margin:.8rem 0 2rem;color:#bbb}
+.menu{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+.menu a{
+text-decoration:none;
+color:#fff;
+border:1px solid #666;
+padding:14px 28px;
+transition:.25s}
+.menu a:hover{background:#fff;color:#000}
+@media(max-width:700px){
+h1{font-size:2.4rem}
+.menu{flex-direction:column;width:80%}
+.menu a{text-align:center}
+}

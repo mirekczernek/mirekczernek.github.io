@@ -1,0 +1,357 @@
+/* ==========================================================
+   MIREK CZERNEK PHOTOGRAPHY
+   responsive.css
+========================================================== */
+
+/* ----------------------------------------------------------
+   1600 px
+---------------------------------------------------------- */
+
+@media (max-width:1600px){
+
+    .hero h1{
+        font-size:88px;
+    }
+
+    .page-header h1{
+        font-size:52px;
+    }
+
+}
+
+/* ----------------------------------------------------------
+   1200 px
+---------------------------------------------------------- */
+
+@media (max-width:1200px){
+
+    .site-header{
+
+        padding:24px 35px;
+
+    }
+
+    .site-header nav ul{
+
+        gap:24px;
+
+    }
+
+    .hero h1{
+
+        font-size:72px;
+
+        letter-spacing:8px;
+
+    }
+
+    .subtitle{
+
+        letter-spacing:8px;
+
+    }
+
+    .hero-buttons{
+
+        gap:18px;
+
+    }
+
+    .hero-button{
+
+        min-width:190px;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:
+            repeat(2,1fr);
+
+    }
+
+}
+
+/* ----------------------------------------------------------
+   992 px
+---------------------------------------------------------- */
+
+@media (max-width:992px){
+
+    .site-header{
+
+        flex-direction:column;
+
+        gap:20px;
+
+        padding-top:20px;
+
+    }
+
+    .logo{
+
+        font-size:30px;
+
+    }
+
+    .hero{
+
+        padding:30px;
+
+    }
+
+    .hero h1{
+
+        font-size:60px;
+
+    }
+
+    .subtitle{
+
+        margin-bottom:45px;
+
+    }
+
+    .gallery-grid{
+
+        gap:14px;
+
+    }
+
+}
+
+/* ----------------------------------------------------------
+   768 px
+---------------------------------------------------------- */
+
+@media (max-width:768px){
+
+    .site-header{
+
+        padding:18px;
+
+    }
+
+    .site-header nav ul{
+
+        flex-wrap:wrap;
+
+        justify-content:center;
+
+        gap:18px;
+
+    }
+
+    .hero h1{
+
+        font-size:46px;
+
+        letter-spacing:5px;
+
+    }
+
+    .subtitle{
+
+        font-size:13px;
+
+        letter-spacing:5px;
+
+    }
+
+    .hero-buttons{
+
+        flex-direction:column;
+
+        width:100%;
+
+        max-width:340px;
+
+        margin:auto;
+
+    }
+
+    .hero-button{
+
+        width:100%;
+
+    }
+
+    .page-header{
+
+        padding-top:140px;
+
+    }
+
+    .page-header h1{
+
+        font-size:42px;
+
+    }
+
+    .gallery-grid{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .contact{
+
+        margin:120px auto;
+
+    }
+
+    .contact-photo{
+
+        width:180px;
+
+        height:180px;
+
+    }
+
+}
+
+/* ----------------------------------------------------------
+   480 px
+---------------------------------------------------------- */
+
+@media (max-width:480px){
+
+    body{
+
+        font-size:15px;
+
+    }
+
+    .hero{
+
+        padding:20px;
+
+    }
+
+    .hero h1{
+
+        font-size:34px;
+
+        letter-spacing:3px;
+
+    }
+
+    .subtitle{
+
+        font-size:12px;
+
+        letter-spacing:3px;
+
+        margin-bottom:35px;
+
+    }
+
+    .hero-button{
+
+        padding:16px;
+
+        min-width:auto;
+
+        font-size:14px;
+
+        letter-spacing:2px;
+
+    }
+
+    .logo{
+
+        font-size:24px;
+
+        letter-spacing:4px;
+
+    }
+
+    .page-header h1{
+
+        font-size:34px;
+
+    }
+
+    .page-header{
+
+        padding:120px 20px 50px;
+
+    }
+
+    .scroll-indicator{
+
+        bottom:18px;
+
+    }
+
+    .contact h2{
+
+        font-size:36px;
+
+    }
+
+    .contact p{
+
+        font-size:16px;
+
+    }
+
+}
+
+/* ----------------------------------------------------------
+   Landscape phones
+---------------------------------------------------------- */
+
+@media (max-height:550px){
+
+    .hero{
+
+        padding-top:110px;
+
+    }
+
+    .hero h1{
+
+        font-size:42px;
+
+        margin-bottom:10px;
+
+    }
+
+    .subtitle{
+
+        margin-bottom:25px;
+
+    }
+
+}
+
+/* ----------------------------------------------------------
+   4K Displays
+---------------------------------------------------------- */
+
+@media (min-width:2200px){
+
+    .hero h1{
+
+        font-size:130px;
+
+    }
+
+    .subtitle{
+
+        font-size:22px;
+
+    }
+
+    .hero-button{
+
+        min-width:260px;
+
+        padding:22px 42px;
+
+        font-size:18px;
+
+    }
+
+}

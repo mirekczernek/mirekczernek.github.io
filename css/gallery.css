@@ -1,0 +1,240 @@
+/* ---------- TOP MENU ---------- */
+
+.topnav{
+
+    position:sticky;
+    top:0;
+
+    z-index:1000;
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+
+    padding:22px 8%;
+
+    background:rgba(0,0,0,.85);
+
+    backdrop-filter:blur(12px);
+
+}
+
+.logo{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:32px;
+
+    letter-spacing:4px;
+
+}
+
+.menu{
+
+    display:flex;
+
+    gap:40px;
+
+}
+
+.menu a{
+
+    color:white;
+
+    font-size:15px;
+
+    letter-spacing:2px;
+
+    transition:.3s;
+
+}
+
+.menu a:hover{
+
+    opacity:.6;
+
+}
+
+/* ---------- HEADER ---------- */
+
+.galleryHeader{
+
+    padding:70px 0 40px;
+
+    text-align:center;
+
+}
+
+.galleryHeader h1{
+
+    font-family:'Cormorant Garamond',serif;
+
+    font-size:56px;
+
+    letter-spacing:6px;
+
+}
+
+/* ---------- GALLERY ---------- */
+
+.gallery{
+
+    column-count:3;
+
+    column-gap:18px;
+
+    width:min(1500px,92%);
+
+    margin:0 auto 80px;
+
+}
+
+.gallery img{
+
+    width:100%;
+
+    margin-bottom:18px;
+
+    display:block;
+
+    cursor:pointer;
+
+    border-radius:3px;
+
+    transition:.35s;
+
+}
+
+.gallery img:hover{
+
+    transform:scale(1.02);
+
+}
+
+/* ---------- LIGHTBOX ---------- */
+
+.lightbox{
+
+    position:fixed;
+
+    inset:0;
+
+    background:rgba(0,0,0,.95);
+
+    display:none;
+
+    justify-content:center;
+
+    align-items:center;
+
+    z-index:5000;
+
+}
+
+.lightbox.active{
+
+    display:flex;
+
+}
+
+.lightbox img{
+
+    max-width:92%;
+
+    max-height:90vh;
+
+}
+
+#close{
+
+    position:absolute;
+
+    top:30px;
+
+    right:40px;
+
+    font-size:42px;
+
+    cursor:pointer;
+
+}
+
+#prev,
+#next{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    font-size:60px;
+
+    cursor:pointer;
+
+}
+
+#prev{
+
+    left:40px;
+
+}
+
+#next{
+
+    right:40px;
+
+}
+
+/* ---------- MOBILE ---------- */
+
+@media(max-width:1000px){
+
+.gallery{
+
+column-count:2;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.menu{
+
+display:none;
+
+}
+
+.logo{
+
+font-size:24px;
+
+}
+
+.gallery{
+
+column-count:1;
+
+}
+
+.galleryHeader h1{
+
+font-size:40px;
+
+}
+
+#prev,
+#next{
+
+font-size:42px;
+
+}
+
+}

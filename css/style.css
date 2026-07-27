@@ -345,3 +345,311 @@ ul{
     border-color:white;
 
 }
+/* ==========================================================
+   ANIMATIONS
+========================================================== */
+
+@keyframes fadeIn {
+
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+
+}
+
+@keyframes pulse {
+
+    0%{
+        opacity:.25;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+    100%{
+        opacity:.25;
+    }
+
+}
+
+.fade-in{
+
+    animation:fadeIn .8s ease both;
+
+}
+
+/* ==========================================================
+   SCROLL INDICATOR
+========================================================== */
+
+.scroll-indicator{
+
+    position:absolute;
+
+    left:50%;
+
+    bottom:36px;
+
+    transform:translateX(-50%);
+
+    font-size:26px;
+
+    opacity:.45;
+
+    animation:pulse 2s infinite;
+
+    user-select:none;
+
+}
+
+/* ==========================================================
+   PAGE HEADER
+========================================================== */
+
+.page-header{
+
+    width:100%;
+
+    padding:150px 40px 60px;
+
+    text-align:center;
+
+}
+
+.page-header h1{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:56px;
+
+    font-weight:500;
+
+    letter-spacing:8px;
+
+    margin-bottom:18px;
+
+}
+
+.page-header p{
+
+    color:var(--grey);
+
+    max-width:700px;
+
+    margin:auto;
+
+}
+
+/* ==========================================================
+   CONTENT
+========================================================== */
+
+.container{
+
+    width:min(92%, var(--max-width));
+
+    margin:auto;
+
+}
+
+/* ==========================================================
+   GALLERY PLACEHOLDER
+   (Masonry přijde v bodu 2)
+========================================================== */
+
+.gallery{
+
+    width:min(92%,1500px);
+
+    margin:0 auto 80px;
+
+}
+
+.gallery-grid{
+
+    display:grid;
+
+    grid-template-columns:
+        repeat(auto-fit,minmax(320px,1fr));
+
+    gap:18px;
+
+}
+
+.gallery-item{
+
+    position:relative;
+
+    overflow:hidden;
+
+    background:#111;
+
+    cursor:pointer;
+
+}
+
+.gallery-item img{
+
+    transition:
+        transform .6s ease,
+        opacity .6s ease;
+
+}
+
+.gallery-item:hover img{
+
+    transform:scale(1.05);
+
+    opacity:.88;
+
+}
+
+/* připraveno pro budoucí popisky */
+
+.gallery-caption{
+
+    position:absolute;
+
+    left:0;
+
+    right:0;
+
+    bottom:0;
+
+    padding:20px;
+
+    background:linear-gradient(
+        transparent,
+        rgba(0,0,0,.82)
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.gallery-item:hover .gallery-caption{
+
+    opacity:1;
+
+}
+
+/* ==========================================================
+   CONTACT
+========================================================== */
+
+.contact{
+
+    width:min(90%,700px);
+
+    margin:180px auto;
+
+    text-align:center;
+
+}
+
+.contact-photo{
+
+    width:220px;
+
+    height:220px;
+
+    border-radius:50%;
+
+    overflow:hidden;
+
+    margin:0 auto 40px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+}
+
+.contact h2{
+
+    font-family:"Cormorant Garamond",serif;
+
+    font-size:48px;
+
+    margin-bottom:25px;
+
+}
+
+.contact p{
+
+    margin:12px 0;
+
+    color:var(--grey);
+
+    font-size:18px;
+
+}
+
+/* ==========================================================
+   FOOTER
+========================================================== */
+
+footer{
+
+    padding:40px;
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:14px;
+
+    letter-spacing:1px;
+
+    border-top:1px solid rgba(255,255,255,.08);
+
+}
+
+/* ==========================================================
+   UTILITIES
+========================================================== */
+
+.hidden{
+
+    display:none !important;
+
+}
+
+.center{
+
+    text-align:center;
+
+}
+
+.mt-1{margin-top:1rem;}
+.mt-2{margin-top:2rem;}
+.mt-3{margin-top:3rem;}
+.mt-4{margin-top:4rem;}
+
+.mb-1{margin-bottom:1rem;}
+.mb-2{margin-bottom:2rem;}
+.mb-3{margin-bottom:3rem;}
+.mb-4{margin-bottom:4rem;}
+
+/* ==========================================================
+   PREPARATION FOR LIGHTBOX
+========================================================== */
+
+.lightbox{
+
+    display:none;
+
+}
+
+.lightbox.active{
+
+    display:flex;
+
+}

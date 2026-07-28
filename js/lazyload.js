@@ -1,0 +1,1 @@
+new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('loaded');}})).observe(document.body);

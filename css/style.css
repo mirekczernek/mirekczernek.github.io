@@ -127,17 +127,22 @@ ul{
 
     transition:
 
-        opacity 2s ease,
+        opacity 2.4s ease,
 
-        transform 10s linear;
+        transform 8s linear;
 
+    will-change:opacity,transform;
+
+}
 }
 
 .slide.active{
 
     opacity:1;
 
-    transform:scale(1.06);
+    transform:scale(1.08);
+
+}
 
 }
 

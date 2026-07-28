@@ -1,1 +1,1 @@
-console.log('Portfolio ZIP01');
+document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.year').forEach(e=>e.textContent=new Date().getFullYear())});

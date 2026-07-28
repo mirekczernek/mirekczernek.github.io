@@ -1,1 +1,1 @@
-document.querySelectorAll('.nav a').forEach(a=>{if(a.href===location.href)a.classList.add('active')});
+document.querySelectorAll('.nav a').forEach(a=>{if(a.pathname===location.pathname)a.classList.add('active')});

@@ -1,0 +1,1 @@
+.nav{position:sticky;top:0;background:rgba(5,5,5,.92);display:flex;justify-content:center;gap:30px;padding:18px}.nav a{text-decoration:none;color:var(--muted)}.nav a.active,.nav a:hover{color:var(--accent)}

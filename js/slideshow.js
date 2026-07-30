@@ -1,14 +1,1 @@
-
-const slides=[
-'img/hero/slide1.jpg',
-'img/hero/slide2.jpg',
-'img/hero/slide3.jpg'
-];
-const hero=document.getElementById('hero');
-let i=0;
-function show(){
- if(hero) hero.style.backgroundImage=`url(${slides[i]})`;
- i=(i+1)%slides.length;
-}
-show();
-setInterval(show,5000);
+const slides=['img/hero/slide1.jpg','img/hero/slide2.jpg','img/hero/slide3.jpg'];let c=0;function show(){const i=document.getElementById('heroImage');if(!i)return;i.style.opacity=0;setTimeout(()=>{i.src=slides[c];i.style.opacity=1;},250);c=(c+1)%slides.length;}window.addEventListener('DOMContentLoaded',()=>{const i=document.getElementById('heroImage');if(i){i.style.transition='opacity .5s';show();setInterval(show,5000);}});

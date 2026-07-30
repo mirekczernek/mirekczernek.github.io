@@ -1,1 +1,1 @@
-document.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.year').forEach(e=>e.textContent=new Date().getFullYear())});
+window.addEventListener('DOMContentLoaded',()=>{document.querySelectorAll('.nav a').forEach(a=>{if(a.pathname===location.pathname){a.style.color='#fff';a.style.fontWeight='bold';}});});

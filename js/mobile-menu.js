@@ -1,0 +1,1 @@
+const b=document.querySelector('.menu-toggle');if(b){b.onclick=()=>document.querySelector('.nav').classList.toggle('open');}

@@ -1,16 +1,15 @@
-A6 – finální vylepšení galerie
+A7
 
-Připoj do všech stránek:
+1. Nahraď soubor:
+   js/app.js
 
-<head>
-<link rel="stylesheet" href="css/gallery-enhancements.css">
+2. Do <head> přidej:
+   <link rel="stylesheet" href="css/hero.css">
 
-Před </body>
+3. Ujisti se, že ve složce img/hero jsou:
+   slide1.jpg
+   slide2.jpg
+   slide3.jpg
 
-<script src="js/gallery-enhancements.js"></script>
-
-Novinky:
-✓ Lazy Loading (rychlejší načítání)
-✓ Asynchronní dekódování obrázků
-✓ Plynulé objevení fotografií
-✓ Jednotný poměr stran náhledů
+Po nahrání na GitHub Pages udělej tvrdé obnovení stránky:
+Ctrl+F5

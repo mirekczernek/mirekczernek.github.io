@@ -1,1 +1,26 @@
-function openLightbox(src,t=''){let l=document.getElementById('lightbox');if(!l){l=document.createElement('div');l.id='lightbox';l.innerHTML='<img><div style="position:absolute;bottom:20px;color:#fff"></div>';l.onclick=e=>{if(e.target===l)l.remove()};document.body.appendChild(l);}l.querySelector('img').src=src;l.querySelector('div').textContent=t;}document.addEventListener('keydown',e=>{const l=document.getElementById('lightbox');if(l&&e.key==='Escape')l.remove();});
+
+document.addEventListener('DOMContentLoaded',()=>{
+ const lb=document.createElement('div');
+ lb.id='lightbox';
+ lb.innerHTML='<span class="close">&times;</span><img id="lbImg">';
+ document.body.appendChild(lb);
+
+ const img=lb.querySelector('#lbImg');
+ const close=()=>lb.classList.remove('open');
+
+ document.querySelectorAll('.gallery img').forEach(i=>{
+   i.addEventListener('click',e=>{
+      e.preventDefault();
+      img.src=i.src;
+      lb.classList.add('open');
+   });
+ });
+
+ lb.addEventListener('click',e=>{
+   if(e.target===lb||e.target.classList.contains('close')) close();
+ });
+
+ document.addEventListener('keydown',e=>{
+   if(e.key==='Escape') close();
+ });
+});

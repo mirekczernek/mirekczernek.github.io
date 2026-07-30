@@ -1,1 +1,6 @@
-async function loadGallery(){const c=new URLSearchParams(location.search).get('category')||'people';const d=await fetch(`data/${c}.json`).then(r=>r.json());const g=document.getElementById('gallery');g.className='gallery-grid';g.innerHTML='';d.forEach(p=>{const x=document.createElement('div');x.className='gallery-item';const i=document.createElement('img');i.loading='lazy';i.src=p.src;i.alt=p.title;i.onload=()=>i.classList.add('loaded');x.onclick=()=>openLightbox(p.src,p.title);x.appendChild(i);g.appendChild(x);});}loadGallery();
+
+document.querySelectorAll('.gallery img').forEach(img=>{
+ img.addEventListener('click',()=>{
+   window.location=img.src;
+ });
+});

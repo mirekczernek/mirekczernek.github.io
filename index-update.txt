@@ -1,1 +1,0 @@
-Přidej do index.html odkazy na hero.css, animations.css, mobile.css a skripty slideshow.js, page.js.

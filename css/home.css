@@ -1,5 +1,0 @@
-
-.hero{height:100vh;background:#111 center/cover no-repeat;display:flex;align-items:center;justify-content:center;transition:background-image 1s ease}
-.overlay{text-align:center;background:rgba(0,0,0,.25);padding:40px 60px}
-.overlay h1{font-size:4rem;letter-spacing:.25rem;margin:0}
-.overlay p{color:#ddd;letter-spacing:.4rem;text-transform:uppercase}

@@ -1,0 +1,215 @@
+/* ===========================
+   GALERIE
+=========================== */
+
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(auto-fill,minmax(320px,1fr));
+    gap:22px;
+}
+
+.gallery a{
+    display:block;
+    overflow:hidden;
+    border-radius:10px;
+    text-decoration:none;
+    background:#111;
+}
+
+.gallery img{
+    display:block;
+    width:100%;
+    aspect-ratio:3/2;
+    object-fit:cover;
+
+    transition:
+        transform .35s ease,
+        opacity .35s ease;
+}
+
+.gallery a:hover img{
+    transform:scale(1.04);
+}
+
+/* ===========================
+   LIGHTBOX
+=========================== */
+
+#lightbox{
+
+    position:fixed;
+    inset:0;
+
+    display:none;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,.95);
+
+    z-index:99999;
+
+}
+
+#lightbox.active{
+
+    display:flex;
+
+}
+
+#lightbox img{
+
+    max-width:92vw;
+    max-height:90vh;
+
+    border-radius:8px;
+
+    transition:
+        opacity .25s ease,
+        transform .25s ease;
+
+}
+
+#lightbox img.fade{
+
+    opacity:0;
+    transform:scale(.97);
+
+}
+
+/* ===========================
+   ZAVŘÍT
+=========================== */
+
+#lightboxClose{
+
+    position:absolute;
+
+    top:24px;
+    right:35px;
+
+    color:white;
+
+    font-size:42px;
+
+    cursor:pointer;
+
+    user-select:none;
+
+}
+
+/* ===========================
+   ŠIPKY
+=========================== */
+
+.lightboxArrow{
+
+    position:absolute;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:60px;
+    height:60px;
+
+    border-radius:50%;
+
+    border:none;
+
+    background:rgba(255,255,255,.12);
+
+    color:white;
+
+    font-size:34px;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.lightboxArrow:hover{
+
+    background:rgba(255,255,255,.28);
+
+}
+
+#prevImage{
+
+    left:25px;
+
+}
+
+#nextImage{
+
+    right:25px;
+
+}
+
+/* ===========================
+   POČÍTADLO
+=========================== */
+
+#lightboxCounter{
+
+    position:absolute;
+
+    bottom:28px;
+
+    left:50%;
+
+    transform:translateX(-50%);
+
+    color:white;
+
+    font-size:15px;
+
+    letter-spacing:.15em;
+
+    opacity:.8;
+
+}
+
+/* ===========================
+   MOBIL
+=========================== */
+
+@media (max-width:800px){
+
+    .gallery{
+
+        grid-template-columns:1fr;
+
+    }
+
+    .lightboxArrow{
+
+        width:48px;
+        height:48px;
+
+        font-size:28px;
+
+    }
+
+    #prevImage{
+
+        left:10px;
+
+    }
+
+    #nextImage{
+
+        right:10px;
+
+    }
+
+    #lightboxClose{
+
+        top:12px;
+        right:18px;
+
+        font-size:34px;
+
+    }
+
+}

@@ -1,0 +1,197 @@
+:root{
+    --bg:#050505;
+    --text:#f2f2f2;
+    --muted:#9a9a9a;
+    --max:1400px;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:Arial,Helvetica,sans-serif;
+}
+
+/* ---------- MENU ---------- */
+
+.nav{
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:40px;
+
+    padding:22px;
+
+    background:rgba(0,0,0,.85);
+    backdrop-filter:blur(8px);
+
+    z-index:999;
+}
+
+.nav a{
+    color:#ddd;
+    text-decoration:none;
+    letter-spacing:.08em;
+    transition:.3s;
+}
+
+.nav a:hover{
+    color:#fff;
+}
+
+/* ---------- HERO ---------- */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    flex-direction:column;
+
+    justify-content:center;
+    align-items:center;
+
+    text-align:center;
+
+    padding-top:70px;
+}
+
+.hero h1{
+    font-size:70px;
+    font-weight:300;
+    letter-spacing:14px;
+}
+
+.hero p{
+    margin-top:30px;
+    letter-spacing:10px;
+    color:#999;
+}
+
+#heroImage{
+    width:100%;
+    max-width:1400px;
+    height:70vh;
+
+    object-fit:cover;
+
+    margin-top:45px;
+
+    border-radius:8px;
+
+    transition:opacity .6s;
+}
+
+/* ---------- OBSAH ---------- */
+
+.container{
+    max-width:1400px;
+
+    margin:120px auto;
+
+    padding:0 25px;
+}
+
+.container h1{
+    margin-bottom:35px;
+
+    font-size:42px;
+    font-weight:300;
+}
+
+/* ---------- GALERIE ---------- */
+
+.gallery{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fill,minmax(320px,1fr));
+
+    gap:20px;
+}
+
+.gallery img{
+    width:100%;
+    aspect-ratio:3/2;
+
+    object-fit:cover;
+
+    border-radius:8px;
+
+    cursor:pointer;
+
+    transition:transform .3s;
+}
+
+.gallery img:hover{
+    transform:scale(1.02);
+}
+
+/* ---------- KONTAKT ---------- */
+
+.profile{
+    text-align:center;
+    padding-top:40px;
+}
+
+.profile-photo{
+    width:220px;
+    height:220px;
+
+    object-fit:cover;
+    border-radius:50%;
+
+    border:3px solid white;
+
+    margin-bottom:30px;
+}
+
+.profile p{
+    font-size:20px;
+    color:#bcbcbc;
+    margin:12px 0;
+}
+
+/* ---------- MOBIL ---------- */
+
+@media (max-width:800px){
+
+    .nav{
+        gap:18px;
+        font-size:14px;
+        flex-wrap:wrap;
+        padding:18px;
+    }
+
+    .hero h1{
+        font-size:42px;
+        letter-spacing:8px;
+    }
+
+    .hero p{
+        letter-spacing:5px;
+    }
+
+    #heroImage{
+        height:45vh;
+    }
+
+    .container{
+        margin-top:140px;
+    }
+
+    .profile-photo{
+        width:180px;
+        height:180px;
+    }
+
+}

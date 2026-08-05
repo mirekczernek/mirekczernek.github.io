@@ -29,6 +29,7 @@ const galerie = [
     "foto028.jpg",
     "foto029.jpg",
     "foto030.jpg",
+    "foto031.jpg",
     "foto032.jpg",
     "foto033.jpg",
     "foto034.jpg",

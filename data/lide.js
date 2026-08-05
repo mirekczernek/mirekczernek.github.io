@@ -66,7 +66,6 @@ const galerie = [
     "foto065.jpg",
     "foto066.jpg",
     
-
 ];
 
   
